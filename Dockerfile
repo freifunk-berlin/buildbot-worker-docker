@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 RUN apt update && \
-  apt install -y python3 python3-dev python3-pip curl rsync && \
+  apt install -y python3 python3-dev python3-pip curl rsync sqlite3 && \
   pip3 install buildbot-worker
 
 # TODO: move openwrt dependencies in its own docker container
